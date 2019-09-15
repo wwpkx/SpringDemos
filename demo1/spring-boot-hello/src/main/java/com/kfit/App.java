@@ -10,21 +10,16 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 
-/**
- * 在这里我们使用@SpringBootApplication指定这是一个 spring boot的应用程序.
- * @author Angel -- 守护天使
- * @version v.0.1
- * @date 2016年12月10日
- */
-//extends WebMvcConfigurerAdapter
+//在这里我们使用@SpringBootApplication指定这是一个 spring boot的应用程序.
 @SpringBootApplication
-public class App{
-	
+public class App {
+
 //	@Override
 //	public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
 //		super.configureMessageConverters(converters);
 //		
 //		/*
+//		 * 0、public class App extends WebMvcConfigurerAdapter
 //		 * 1、需要先定义一个 convert 转换消息的对象;
 //		 * 2、添加fastJson 的配置信息，比如：是否要格式化返回的json数据;
 //		 * 3、在convert中添加配置信息.
@@ -49,10 +44,8 @@ public class App{
 //		
 //	}
 	
-	
 	/**
 	 * 在这里我们使用 @Bean注入 fastJsonHttpMessageConvert
-	 * @return
 	 */
 	@Bean
 	public HttpMessageConverters fastJsonHttpMessageConverters() {

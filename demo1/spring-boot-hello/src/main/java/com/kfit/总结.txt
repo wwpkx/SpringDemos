@@ -1,7 +1,5 @@
 
-
 ------在spring boot中如何使用模板引擎的步骤：
-
 1、在pom.xml文件中添加相应的依赖包，thymeleaf和freemarker；
 2、在application.properties文件中添加配置信息，开发过程建议关闭缓存；
 3、编写模板文件，thymeleaf的默认的后缀是.html,freemarker的默认后缀是.ftl;

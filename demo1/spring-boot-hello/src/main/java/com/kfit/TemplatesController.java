@@ -7,15 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * 注意：
- * 1.在Thymeleaf 模板文件中，标签是需要闭合的，3.0之前是需要闭合的
+ * 1. 在Thymeleaf 模板文件中，标签是需要闭合的，3.0之前是需要闭合的
  * 2. thymeleaf 3.0+ 是可以不强制要求闭合的。
- * 
  * 3. 支持同时使用多个模板引擎，比如：thymeleaf和freemarker 可以并存。
- * 
- * 
- * @author Angel -- 守护天使
- * @version v.0.1
- * @date 2016年12月24日
  */
 @Controller
 @RequestMapping("/templates")
@@ -39,5 +33,4 @@ public class TemplatesController {
 		map.put("name","Andy");
 		return "helloFtl";
 	}
-	
 }
