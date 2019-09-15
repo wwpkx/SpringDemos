@@ -1,0 +1,20 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+   version="1.0">
+   <persistence-unit name="itcast" transaction-type="RESOURCE_LOCAL">
+<!-- EJB3中用于配置全局事务的 -->
+<!--<jta-data-source>java:/DefaultDS</jta-data-source> -->
+      <properties>
+      	 <!--hibernate可以使用mysql5比较高级的特性  -->
+         <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+         <!-- 映射源数据没有发生改变的情况下，而且数据库中表已经存在，那么我们就不需要更新这张表 -->
+         <property name="hibernate.hbm2ddl.auto" value="update"/>
+         <property name="hibernate.connection.driver_class" value="org.gjt.mm.mysql.Driver"/>
+         <property name="hibernate.connection.username" value="root"/>
+         <property name="hibernate.connection.password" value="root"/>
+         <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/itcast?useUnicode=true&amp;characterEncoding=UTF-8"/>
+         
+      </properties>
+   </persistence-unit>
+</persistence>
